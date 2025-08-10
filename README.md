@@ -164,10 +164,3 @@ modern-todo-app/
 * No backend or persistent storage implemented (future enhancement).
 
 ---
-
-```
-
----
-
-If you want, I can also create a ready-to-upload file and save it for you. Just say the word!
-```
