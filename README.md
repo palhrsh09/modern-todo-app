@@ -165,15 +165,6 @@ modern-todo-app/
 
 ---
 
-
----
-
-## Contact
-
-Harsh Pal
-GitHub: [palhrsh09](https://github.com/palhrsh09)
-Email: \[[your-email@example.com](mailto:your-email@example.com)]
-
 ```
 
 ---
