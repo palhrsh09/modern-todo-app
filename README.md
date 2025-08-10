@@ -1,50 +1,182 @@
-# Welcome to your Expo app 👋
+Sure! Here’s the full **README.md** content formatted properly as a markdown file that you can directly put into your repo:
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+````markdown
+# Modern To-Do App
 
-## Get started
+A modern, feature-rich To-Do mobile application built with **React Native** and **Expo**, designed for managing tasks efficiently with priority, status, recurrence, categories, and due dates.
 
-1. Install dependencies
+[GitHub Repository](https://github.com/palhrsh09/modern-todo-app)
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## Table of Contents
 
-   ```bash
-   npx expo start
-   ```
+- [About](#about)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Getting Started](#getting-started)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Folder Structure](#folder-structure)  
+- [Components & Hooks](#components--hooks)  
+- [API & State Management](#api--state-management)  
+- [Known Issues](#known-issues)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact](#contact)
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## About
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+This app is a **To-Do task manager** that allows users to create, edit, and track tasks. Each task has multiple attributes such as:
 
-## Get a fresh project
+- Title & Description  
+- Due Date & Time  
+- Priority (Low, Medium, High)  
+- Status (Pending, Completed, etc.)  
+- Recurrence (None, Daily, Weekly, Monthly)  
+- Category (General, Work, Personal, etc.)
 
-When you're ready, run:
+Users can add new tasks, select dates using a native date-time picker, and filter or sort tasks based on different criteria.
+
+---
+
+## Features
+
+- Add/Edit/Delete tasks  
+- Native Date & Time picker integration  
+- Task prioritization  
+- Status management  
+- Recurrence setup for repeating tasks  
+- Categorization of tasks  
+- UUID based unique task IDs  
+- Responsive UI with buttons highlighting active states  
+- Navigation between screens using `expo-router`  
+- Local state management with custom hooks  
+- Error handling and input validation  
+
+---
+
+## Tech Stack
+
+- **React Native** (Expo managed workflow)  
+- **Expo Router** for navigation  
+- **UUID** for unique task IDs (`react-native-get-random-values` + `uuid`)  
+- **@react-native-community/datetimepicker** for native date/time selection  
+- JavaScript (React Hooks & Functional Components)  
+- React Native core components (SafeAreaView, ScrollView, Button, etc.)
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later recommended)  
+- Expo CLI (`npm install -g expo-cli`)  
+- Android/iOS Simulator or physical device with Expo Go app
+
+---
+
+## Installation
+
+1. Clone the repository:  
+```bash
+git clone https://github.com/palhrsh09/modern-todo-app.git
+cd modern-todo-app
+````
+
+2. Install dependencies:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Start the development server:
 
-## Learn more
+```bash
+npm start
+# or
+expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Open the app in an emulator or scan the QR code with Expo Go on your phone.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## Usage
 
-Join our community of developers creating universal apps.
+* Tap **Add Task** to open the form.
+* Enter title and description.
+* Select due date/time using the date picker.
+* Choose priority, status, recurrence, and category.
+* Save the task to add it to your list.
+* Navigate back to Dashboard to see all tasks.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## Folder Structure
+
+```
+modern-todo-app/
+│
+├── app/                  # Main screens and routing
+│   ├── dashboard.tsx     # Task list dashboard
+│   ├── edittask/         # Edit task screen
+│   └── addtask.tsx       # Add task screen (TasksAdd component)
+│
+├── components/           # Reusable UI components
+│
+├── hooks/                # Custom React hooks (e.g. useTasks)
+│
+├── constants.ts          # App constants (PriorityOptions, StatusOptions, etc.)
+│
+├── types.ts              # TypeScript type definitions (if used)
+│
+└── package.json
+```
+
+---
+
+## Components & Hooks
+
+* **TasksAdd**: Form for adding a new task with validation and state management.
+* **useTasks**: Custom hook to manage tasks (add, update, fetch).
+* **DateTimePicker**: Native date/time selection integrated with error handling.
+* Priority, Status, Recurrence, Category buttons with active state styles.
+
+---
+
+## API & State Management
+
+* State managed locally using React `useState` and `useEffect`.
+* UUID v4 used to generate unique task IDs.
+* Navigation handled by `expo-router`.
+* Tasks are added to the task list via the custom hook `useTasks`.
+
+---
+
+## Known Issues
+
+* Android date picker dismiss warning sometimes appears due to native module behavior — addressed with conditional logic.
+* Text color on buttons is explicitly set for better visibility on selected state.
+* No backend or persistent storage implemented (future enhancement).
+
+---
+
+
+---
+
+## Contact
+
+Harsh Pal
+GitHub: [palhrsh09](https://github.com/palhrsh09)
+Email: \[[your-email@example.com](mailto:your-email@example.com)]
+
+```
+
+---
+
+If you want, I can also create a ready-to-upload file and save it for you. Just say the word!
+```
